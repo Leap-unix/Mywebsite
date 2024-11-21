@@ -1,0 +1,25 @@
+
+@media screen and (max-width: 1080px) {
+
+
+    div{
+        width: 1080px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+.main_btn{
+    background-color: aqua;
+    background-image: url("Snowman.gif");
+    background-size: contain;
+    width: 500px;
+    height: 500px;
+    cursor: pointer;
+
+}
+.main_btn:hover{
+    background-color: aquamarine;
+}

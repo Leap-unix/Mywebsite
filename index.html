@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Text Example</title>
+    <link rel="stylesheet" href="main_btn.css">
+    <link rel="stylesheet" href="change_bg_btn.css">
+
+</head>
+<body>
+
+    <audio id="click-audio">
+        <source src="Mouse_click.mp3" type="audio/mp3">
+    </audio>
+
+    <h1 id="text" style="background-color: gray;">Give the snowman some cookie</h1>
+    <div>
+        <button class="main_btn" onclick="changeText()" ></button>
+        <br>
+
+    </div>
+    <button id="setting_blue" onclick="ch_bg1()">Blue</button>
+    <button id="setting_red" onclick="ch_bg2()">Red</button>
+    <button id="setting_green" onclick="ch_bg3()">Green</button>
+    <button id="setting_white" onclick="ch_bg0()">white</button>
+
+    <script>
+        //Just trying this lanugage :)
+		let x=0;
+        const color = ['blue','red','green','white'];
+        let click_sound = document.getElementById("click-audio")
+
+
+
+
+        function changeText() 
+        {
+			x++;
+            click_sound.play();
+            document.getElementById("text").textContent = "Cookie "+x;
+            if(x==10){
+                document.title = "Thank you for playing";
+            }
+        }
+
+        function ch_bg1(){
+            document.body.style.background = color[0];
+        }
+        function ch_bg2(){
+            document.body.style.background = color[1];
+        }
+        function ch_bg3(){
+            document.body.style.background = color[2];
+        }
+
+        function ch_bg0(){
+            document.body.style.background = color[3];
+        }
+
+    </script>
+
+
+</body>
+</html>
